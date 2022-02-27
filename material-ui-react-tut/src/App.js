@@ -8,8 +8,13 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import  TextField  from '@material-ui/core/TextField';
+
 import {makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { green,orange} from '@material-ui/core/colors';
+import 'fontsource-roboto';
+
+import  Typography  from '@material-ui/core/Typography';
+
 
 
 const useStyles = makeStyles({
@@ -24,6 +29,12 @@ const useStyles = makeStyles({
 })
 
 const theme = createMuiTheme({
+  typography:{
+    h2:{
+      fontSize:36,
+      marginBottom:15,
+    }
+  },
   palette:{
     primary:{
       main:green[400],
@@ -74,6 +85,16 @@ function App() {
     <ThemeProvider theme = {theme}>
     <div className="App">
       <header className="App-header">
+      <Typography variant='h2'>
+      {/* component="div" is also another 
+      parameter if u want to use apart from 
+      regular component independently */}
+      Welcome to MUI
+      </Typography>
+      <Typography variant='subtitle1'>
+      {/* here variant can aslo be h1,h2... */}
+      Learn how to use material UI
+      </Typography>
       <ButtonStyled /> 
 
       {/* TextField component */}
